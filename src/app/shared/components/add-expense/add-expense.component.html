@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Add Expense</ion-title>
+        <ion-button slot="end" fill="outline" (click)="dismissModal()">
+            X
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form [formGroup]="addExpenseForm">
+
+        <ion-item>
+            <ion-input placeholder="Tutar" type="number" formControlName="amount"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-textarea placeholder="Açıklama" type="text" formControlName="description"></ion-textarea>
+        </ion-item>
+
+
+        <ion-item>
+            <ion-label>Harcama Tipi</ion-label>
+            <ion-select value="brown" okText="Ok" cancelText="Cancel" interface="popover" formControlName="type">
+                <ion-select-option value="genel">Genel</ion-select-option>
+                <ion-select-option value="alisveris">Alışveriş</ion-select-option>
+                <ion-select-option value="sinema">Sinema</ion-select-option>
+                <ion-select-option value="yemek">Yemek</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <br>
+        <ion-button color="primary" fill="solid" size="large" expand="block"
+                    (click)="initCreateExpense()" [disabled]="!addExpenseForm.valid">Ekle</ion-button>
+    </form>
+</ion-content>
