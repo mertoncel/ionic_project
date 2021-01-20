@@ -14,7 +14,7 @@ ionic serve
 
 ### EKRAN GÖRÜNTÜLERİ
 
-![alt text]https://i.imgur.com/cOwwlTN.png)
+![alt text](https://i.imgur.com/cOwwlTN.png)
 ![alt text](https://i.imgur.com/Q2yZxoV.png)
 
 
